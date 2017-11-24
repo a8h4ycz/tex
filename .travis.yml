@@ -1,15 +1,15 @@
-
 before_install:
-- sudo apt-get update 
+- sudo apt-get update
 - sudo apt-get install texlive-latex-extra
 script:
 - mkdir _build
 - pdflatex -output-directory _build ./hello.tex
 deploy:
   provider: releases
-  api_key: 3e266a8796b9c761149c39f7b309888fe7722482
+  api_key:
+    secure: A1Na6GEfSzwc2/5Czd8qa9jNcqwk+/3uaVz4+AM9Mjiql1ucfxKJCGUB1/nGKWoMU/c0dpsBpQHKjhXvz+8v2ufIoKKgWAYxwIuisYcSPPcXBCy74hwgjuxh9ILjZSHqGkcw460EgNUFhNAFLsmDHh4w42PIyzgOoRhfDpVL/8Z6+6z3xOK3vNG7+MCGXpplACx4zgC0lqEvWyB77vOfdCjBvkQcWHgXoDaVQikAaRlHsMGf5uXMdlYFMTduaKXZMGkHcDSlzQJn9bMcyogFJKRHqxCKXe4PV1ztt6lbl52id1ShO3aQYts9UsFMPKGEo9bXU4h003MoH9zaADTvzy4iIQTZfW6Xndd5lRmDifRuCqA7TPO7Y43LEgpsYm0zC/9l7RMzUS4eqfd95G4Xloaf/E0A6NKL9Rzp7Csnnv3llTfhtMN8KiynzUlm/hu1/sOU5tLCMOVC8nfX8tYP/WZgqW3m7f0PdlSBLJ0r1I87S5Tyl22C08XhP8c/qczracCtOlZNSdJsQkSuWyJwtQBsoW6RjdmM6FwXO9trnSH1YgpDHuTUGrQ38IHQYP/F7k/VsIXQ3eGv7APNsJWbW6OMfrGCNgZ3M9BG4kjAV5F43RAz3IWcikbtVATXYNWJF55kNvSLMQpz5GK1R5NtejhbNiprU0g28UNLI94Bhro=
   file:
-    - ./_build/hello.pdf
+  - "./_build/hello.pdf"
   skip_cleanup: true
   on:
     tags: true
