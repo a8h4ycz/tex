@@ -8,7 +8,7 @@ pipeline {
             echo 'Building..'
           }
         }
-        stage('') {
+        stage('error') {
           environment {
             jj = '45'
           }
@@ -16,6 +16,11 @@ pipeline {
             echo 'gfsdgdsf'
             sh 'pwd'
             sh 'env'
+          }
+        }
+        stage('ijk') {
+          steps {
+            acceptGitLabMR(mergeCommitMessage: 'oo')
           }
         }
       }
