@@ -7,7 +7,7 @@ script:
 - pdflatex -output-directory _build ./hello.tex
 deploy:
   provider: releases
-  api_key: 62ee449c5dff4f68d117fcb54631a90d4d9b55d4
+  api_key: 3e266a8796b9c761149c39f7b309888fe7722482
   file:
     - ./_build/hello.pdf
   skip_cleanup: true
