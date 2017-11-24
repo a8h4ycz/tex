@@ -35,5 +35,11 @@ pipeline {
         echo 'Deploying....'
       }
     }
+    stage('fsfsd') {
+      steps {
+        sh '''ps
+'''
+      }
+    }
   }
 }
